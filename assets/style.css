@@ -1,0 +1,380 @@
+
+/* =====================================
+   WANDERLUX TRAVEL AGENCY
+   Main Website Stylesheet
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #064e3b;
+    --dark-green: #033b2e;
+    --gold: #c9a45c;
+    --light: #f8f7f2;
+    --white: #ffffff;
+    --text: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Navigation */
+
+header,
+.navbar {
+    background: var(--green);
+    color: var(--white);
+    padding: 16px 7%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--white);
+    margin: 0 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.logo,
+.brand {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* General sections */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+    margin-bottom: 18px;
+    color: var(--green);
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 55px);
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Hero section */
+
+.hero,
+.banner {
+    min-height: 500px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        linear-gradient(rgba(0, 35, 25, 0.65),
+        rgba(0, 35, 25, 0.65)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600")
+        center/cover no-repeat;
+}
+
+.hero h1,
+.banner h1 {
+    color: var(--white);
+}
+
+.hero p,
+.banner p {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+/* Buttons */
+
+.btn,
+button {
+    display: inline-block;
+    background: var(--gold);
+    color: #17251d;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+    background: var(--green);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Cards and grids */
+
+.grid,
+.destination-grid,
+.package-grid,
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card,
+.destination-card,
+.package-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+.card:hover,
+.destination-card:hover,
+.package-card:hover {
+    transform: translateY(-6px);
+}
+
+.card img,
+.destination-card img,
+.package-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3,
+.destination-card h3,
+.package-card h3 {
+    padding: 15px 18px 0;
+}
+
+.card p,
+.destination-card p,
+.package-card p {
+    padding: 0 18px;
+}
+
+/* Forms and calculator */
+
+form,
+.calculator,
+.form-container {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 30px;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: var(--white);
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 4px rgba(201,164,92,0.4);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+/* Calculator result */
+
+#result,
+#totalCost,
+#total-cost,
+.result,
+.calculator-result {
+    margin-top: 20px;
+    padding: 18px;
+    background: #e7f2ed;
+    color: var(--green);
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* About and contact */
+
+.about-content,
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+iframe {
+    width: 100%;
+    min-height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 35px 7%;
+    text-align: center;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+/* Scroll animations */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+    .grid,
+    .destination-grid,
+    .package-grid,
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero,
+    .banner {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 600px) {
+    header,
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .grid,
+    .destination-grid,
+    .package-grid,
+    .cards,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .banner {
+        min-height: 350px;
+        padding: 60px 5%;
+    }
+
+    form,
+    .calculator,
+    .form-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
